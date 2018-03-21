@@ -8,8 +8,8 @@ func GetVersion() (uint,uint) {
 }
 
 type TSPCrypter interface {
-  Encrypt(data []byte, key []byte, counter uint) int
-  Decrypt(data []byte, key []byte, counter uint) int
+  Encrypt(data []byte, key []byte, counter uint) uint
+  Decrypt(data []byte, key []byte, counter uint) uint
 
   GetName() string
 }

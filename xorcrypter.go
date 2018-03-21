@@ -7,19 +7,19 @@ func (*XORCrypter) GetName() string {
   return "XORCrypter"
 }
 
-func (*XORCrypter) Encrypt(data []byte, key []byte, counter uint) int {
+func (*XORCrypter) Encrypt(data []byte, key []byte, counter uint) uint {
   return xorcrypt(data, key, counter)
 }
 
-func (*XORCrypter) Decrypt(data []byte, key []byte, counter uint) int {
+func (*XORCrypter) Decrypt(data []byte, key []byte, counter uint) uint {
   return xorcrypt(data, key, counter)
 }
 
 // in case of simple XOR based "encryption" encrypt and decrypt functions are
 // the identical
-func xorcrypt(data []byte, key []byte, counter uint) int {
+func xorcrypt(data []byte, key []byte, counter uint) uint {
   key_len := uint(len(key))
-  encrypt_len := 0
+  encrypt_len := uint(0)
   start_counter := counter % key_len
 
   for i := 0; i < len(data); i++ {
