@@ -1,4 +1,4 @@
-package tspgocrypt
+package gocryptlib
 
 const VER_MAJOR = 0
 const VER_MINOR = 1

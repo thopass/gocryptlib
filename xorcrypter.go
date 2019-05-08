@@ -1,4 +1,4 @@
-package tspgocrypt
+package gocryptlib
 
 type XORCrypter struct {
 }
